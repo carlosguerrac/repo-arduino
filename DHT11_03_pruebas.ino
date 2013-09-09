@@ -65,7 +65,7 @@ void readTempSensor()
 {
     int chk = DHT11.read(DHT11PIN);
 
-    Serial.print("Read sensor:\t");
+    //Serial.print("Read sensor:\t");
     switch (chk)
     {
         case DHTLIB_OK: 
@@ -101,6 +101,7 @@ void switchRelayOff()
 {
     // turn LED off:
     digitalWrite(RELAY_PIN, LOW); 
+    Serial.print ("OK\t");
     Serial.print ("Switch Relay OFF" );
     Serial.print ("\n");
   
@@ -110,6 +111,7 @@ void switchRelayOn()
 {
     // turn LED off:
     digitalWrite(RELAY_PIN, HIGH); 
+    Serial.print ("OK\t");
     Serial.print ("Switch Relay ON" );
     Serial.print ("\n");
   
@@ -161,3 +163,4 @@ void loop()
 //
 // END OF FILE
 //
+
